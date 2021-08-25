@@ -2,7 +2,7 @@
    (!) "../myfile.text" is one level above you and "/myfile.text" lives in your root directory (!) */
 const dbConfig = require("../config/db.config"); 
 
-// Define Mongoose model
+// Import Mongoose model
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise; // Not neccery in mongoose 5 version and beyond since the default value of Promise is of the global
 
@@ -10,6 +10,6 @@ mongoose.Promise = global.Promise; // Not neccery in mongoose 5 version and beyo
 const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
-db.tutorials = require("./tutorial.model.js")(mongoose);
+db.tutorials = require("./tutorial.model.js")(mongoose); // Import tutorial file and mongoose module into an object and put that object in db.tutorials
 
 module.exports = db;
