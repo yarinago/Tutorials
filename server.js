@@ -46,7 +46,7 @@ db.mongoose
   .connect(db.url, { 
     useNewUrlParser: true,
     useUnifiedTopology: true
-  }) // Trying to create a connection the the url from db.config.js ("mongodb://localhost:27017/yarinago_db")
+  }) // Trying to create a connection to the url from db.config.js ("mongodb://localhost:27017/yarinago_db")
   .then(() => {
     console.log("Connected to the database!");
   })
